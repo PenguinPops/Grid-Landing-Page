@@ -1,0 +1,170 @@
+:root {
+    --bcolor: rgb(42, 2, 43);
+}
+
+body {
+    background-image: linear-gradient( 58.2deg,  rgba(40,91,212,0.73) -3%, rgba(171,53,163,0.45) 49.3%, rgba(255,204,112,0.37) 97.7% );
+}
+
+#main-container {  
+    position: absolute;
+    height: 92vh;
+    width: 90vw;
+    padding: 1%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    background-color: rgba(34, 229, 255, 0.034);
+    border: 1% solid black;
+    box-shadow: 0vmin 1vmin 4vmin rgb(0 0 0 / 80%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+}
+
+#grid-container {
+    display: grid;
+    height: 100%;
+    grid-auto-rows: max-content;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.grid-box {
+    justify-self: center;
+    height: 99%;
+    /* background-color: black; */
+    grid-area: small;
+    /* border: 1px solid white; */
+}
+
+.grid-box:nth-of-type(1) {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
+}
+
+.grid-box:nth-of-type(2) {
+    grid-column: 3 ;
+    grid-row: 1 ;
+}
+.grid-box:nth-of-type(3) {
+    grid-column: 3 ;
+    grid-row: 2 ;
+}
+
+.grid-box:nth-of-type(4) {
+    grid-column: 1 ;
+    grid-row: 3 ;
+}
+
+.grid-box:nth-of-type(5) {
+    grid-column: 2 ;
+    grid-row: 3 ;
+}
+
+.grid-box:nth-of-type(6) {
+    grid-column: 3 ;
+    grid-row: 3 ;
+}
+.grid-box:nth-of-type(7) {
+    grid-column: 4 ;
+    grid-row: 1 ;
+}
+.grid-box:nth-of-type(8) {
+    grid-column: 4 ;
+    grid-row: 2 ;
+}
+.grid-box:nth-of-type(9) {
+    grid-column: 4 ;
+    grid-row: 3 ;
+}
+
+.grid-content {
+    width: 94%;
+    height: 94%;
+    top: 3%;
+    left: 3%;
+    background: rgba(255, 255, 255, 0.4); /* Adjust opacity to control frosted effect */
+    backdrop-filter: blur(2px); /* Adjust blur radius as needed */
+    border-radius: 1rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 1s ease, filter 0.3s ease; /* Change transition to background */
+}
+
+.grid-content:hover {
+    background: linear-gradient(-45deg, #1e2338, #290d2d, #8793d0);
+    animation: gradient 15s ease infinite;
+}
+
+    
+.blur {
+    filter: blur(0.1px);
+}
+
+.fade-out {
+    opacity: 0.2;
+}
+
+.grid-content:nth-of-type(1) {
+    width: 99.6%;
+    height: 100.6%;
+    top:0.4%;
+    left: 0.4%;
+}
+
+
+.image{
+    border-radius: 1rem;
+    width: 80%;
+    height: 80%;
+    object-fit:cover;
+    object-position: center center;
+    opacity: 1;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.image:hover {
+    transform: scale(1.1);
+    opacity: 0.3;
+}
+
+
+
+.grid-box {
+    transition: transform 0.5s ease-in-out;
+}
+
+img { max-width: 100%; height: auto; }
+
+.grid-content p {
+    position: absolute; /* Position the paragraph absolutely */
+    top: 50%; /* Adjust top position */
+    left: 50%; /* Adjust left position */
+    font-size: 4vh;
+    font-family: "Verdana";
+    color:transparent;
+    transform: translateX(-50%) translateY(-100%) scale(1); /* Center the paragraph */
+    z-index: 1; /* Ensure the paragraph appears above the image */
+    transition: transform 0.3s ease, color 0.3s ease;
+    pointer-events: none;
+}
+
+.grid-content:hover p {
+    transform: translateX(-50%) translateY(-140%) scale(1.4); /* Scale up the paragraph */
+    cursor:default;
+    color:white;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.smalltext {
+    font-size: 3vh;
+}
+
+.smallertext {
+    font-size: 2vh;
+}
