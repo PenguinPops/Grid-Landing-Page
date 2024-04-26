@@ -88,7 +88,7 @@ body {
     top: 3%;
     left: 3%;
     background: rgba(255, 255, 255, 0.4); /* Adjust opacity to control frosted effect */
-    backdrop-filter: blur(2px); /* Adjust blur radius as needed */
+    position: relative;
     border-radius: 1rem;
     overflow: hidden;
     display: flex;
@@ -130,7 +130,7 @@ body {
 
 .image:hover {
     transform: scale(1.1);
-    opacity: 0.3;
+    opacity: 0.2;
 }
 
 
