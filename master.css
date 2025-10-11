@@ -78,42 +78,47 @@ body {
 }
 
 .grid-box:nth-of-type(1) {
-    grid-column: 1 / span 2;
+    grid-column: 1;
     grid-row: 1 / span 2;
 }
 
 .grid-box:nth-of-type(2) {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+}
+
+.grid-box:nth-of-type(3) {
     grid-column: 3 ;
     grid-row: 1 ;
 }
-.grid-box:nth-of-type(3) {
+.grid-box:nth-of-type(4) {
     grid-column: 3 ;
     grid-row: 2 ;
 }
 
-.grid-box:nth-of-type(4) {
+.grid-box:nth-of-type(5) {
     grid-column: 1 ;
     grid-row: 3 ;
 }
 
-.grid-box:nth-of-type(5) {
+.grid-box:nth-of-type(6) {
     grid-column: 2 ;
     grid-row: 3 ;
 }
 
-.grid-box:nth-of-type(6) {
+.grid-box:nth-of-type(7) {
     grid-column: 3 ;
     grid-row: 3 ;
 }
-.grid-box:nth-of-type(7) {
+.grid-box:nth-of-type(8) {
     grid-column: 4 ;
     grid-row: 1 ;
 }
-.grid-box:nth-of-type(8) {
+.grid-box:nth-of-type(9) {
     grid-column: 4 ;
     grid-row: 2 ;
 }
-.grid-box:nth-of-type(9) {
+.grid-box:nth-of-type(10) {
     grid-column: 4 ;
     grid-row: 3 ;
 }
@@ -137,7 +142,7 @@ body {
     background: linear-gradient(-45deg, #1e2338, #290d2d, #8793d0);
 }
 
-    
+
 .blur {
     filter: blur(0.1px);
 }
@@ -195,6 +200,12 @@ img { max-width: 100%; height: auto; }
     cursor:default;
     color:white;
     text-shadow: 2px 2px 4px #000000;
+}
+
+
+.text-label {
+  text-align: center; /*both properties fix rendering of texts with spaces*/
+  text-wrap: nowrap; /*fixes improper placement of transitioned paragraph with spaces*/
 }
 
 .smalltext {
